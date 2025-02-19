@@ -1,10 +1,6 @@
-# Playwright Python Template
+# Playwright E2E W3schools
 
-Template to create a **Playwright** project with **Python** for end-to-end testing.
-
-## Description
-
-This project performs E2E tests on the [Bootcamp QA](https://bootcampqa.com) website, generating a report of results and video recordings. Tests are executed on **Chrome** (desktop).
+This project performs E2E tests on the [W3Schools](https://www.w3schools.com/) website, generating a report of results and video recordings. Tests are executed on **Chrome** (desktop).
 
 ## Technologies
 
