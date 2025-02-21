@@ -1,6 +1,6 @@
 # Playwright E2E W3schools
 
-This project performs E2E tests on the [W3Schools](https://www.w3schools.com/) website, generating a report of results and video recordings. Tests are executed on **Chrome** (desktop).
+This project performs E2E tests on the [Tesla](https://www.tesla.com/es_es) website, generating a report of results and video recordings. Tests are executed on **Chrome** (desktop).
 
 ## Technologies
 
