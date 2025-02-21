@@ -11,7 +11,7 @@ This project performs E2E tests on the [W3Schools](https://www.w3schools.com/) w
 
 You can view the test status using the following **GitHub Actions** badge:
 
-![Test Workflow](https://github.com/Bootcamp-QA/playwright-python-template/actions/workflows/playwright_tests.yml/badge.svg)
+![Test Workflow](https://github.com/marbhg/e2e-playwright-w3/workflows/playwright_tests.yml/badge.svg)
 
 ## Requirements
 
