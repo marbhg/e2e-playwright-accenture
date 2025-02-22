@@ -1,6 +1,6 @@
 # Playwright E2E TESLA
 
-This project performs E2E tests on the [Tesla](https://www.tesla.com/es_es) website, generating a report of results and video recordings. Tests are executed on **Chrome** (desktop).
+This project performs E2E tests on the [Accenture](https://www.accenture.com/es-es) website, generating a report of results and video recordings. Tests are executed on **Chrome** (desktop).
 
 ## Technologies
 
