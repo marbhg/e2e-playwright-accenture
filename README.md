@@ -1,4 +1,4 @@
-# Playwright E2E TESLA
+# Playwright E2E Accenture
 
 This project performs E2E tests on the [Accenture](https://www.accenture.com/es-es) website, generating a report of results and video recordings. Tests are executed on **Chrome** (desktop).
 
