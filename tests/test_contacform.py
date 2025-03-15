@@ -11,11 +11,9 @@ def test_visit_contactfomr(page:Page):
   print("When the user accept the cookies")
   page.get_by_role("button", name="Aceptar todas las Cookies.").click()
 
-#El usuario Accede a la section de formulario 
   print("When The user accesses the Jobseeker link")
   page.get_by_role("button", name="Jobseeker ").click()
 
-  #El usuario rellena el formulario con el campo email vacio 
   print("When the user fills in the name field")
   page.get_by_role("textbox", name="* First Name").clear()
   page.get_by_role("textbox", name="* First Name").fill("Maria")
