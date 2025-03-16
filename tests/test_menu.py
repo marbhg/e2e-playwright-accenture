@@ -1,4 +1,5 @@
 from playwright.sync_api import Page, expect
+import utils
 
 def test_visit_menu_links(page:Page):
   #Abrir la URL de la pagina
@@ -11,25 +12,27 @@ def test_visit_menu_links(page:Page):
 
   #Localizamos el elemento del enlace Servicioc
   print("When Visit the service link")
-  page.pause()
   #primero hace click en Menu 
-  page.get_by_role("button", name="menu", exact=True).click()
+  if(utils.is_mobile(page)):
+    page.get_by_role("button", name="menu", exact=True).click()
+
   #Luego hace click en Servicios
   page.get_by_role("button", name="Servicios").click()
-  #Accedemos al elemento dentro del enlace Servicio (movil)
   print("When Access the automation link")
   page.get_by_role("menuitem", name="Automation").click()
 
   #Acccedemos al enlace de quienes somos y entramos al apartado de Sostenibilidad
   print("When Visit the Who We Are link and access the Sustainability section")
-  page.get_by_role("button", name="menu", exact=True).click()
+  if(utils.is_mobile(page)):
+    page.get_by_role("button", name="menu", exact=True).click()
   page.get_by_role("button", name="Quiénes Somos").click()
   page.locator("#linklistteaser-a707da989f").get_by_role("menuitem", name="Sostenibilidad").click()
   expect(page.get_by_role("link", name="Sostenibilidad", exact=True)).to_be_visible()
 
   #Accedemos al apartado de incorporate y accedemos al enlace de oferta
   print("When Visit the Join link and enter the Offer Finder link")
-  page.get_by_role("button", name="menu", exact=True).click()
+  if(utils.is_mobile(page)):
+    page.get_by_role("button", name="menu", exact=True).click()
   page.get_by_role("button", name="Incorpórate").click()
   page.get_by_role("menuitem", name="Buscador de ofertas").click()
 
