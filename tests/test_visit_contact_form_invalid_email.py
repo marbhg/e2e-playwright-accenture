@@ -1,7 +1,7 @@
 from playwright.sync_api import Page, expect
  
 #Arir la URL de la pagina
-def test_visit_contactfomr(page:Page):
+def test_visit_contact_form_invalid(page:Page):
 
 #Abrir la URL de la pagina 
   print("Given the user visit home page Accenture")

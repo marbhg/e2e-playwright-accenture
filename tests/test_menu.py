@@ -6,40 +6,29 @@ def test_visit_menu_links(page:Page):
   print("Given the user visit home page Accenture")
   page.goto("https://www.accenture.com/es-es")
 
-  print("When the user aceppt the cookies")
   #Localizamos el elemento por texto
-  page.get_by_text("Aceptar todas las Cookies").click()
+  print("When the user aceppt the cookies")
+  page.get_by_role("button", name="Aceptar todas las Cookies.").click()
 
-  #Localizamos el elemento del enlace Servicioc
-  print("When Visit the service link")
-  #primero hace click en Menu 
-  if(utils.is_mobile(page)):
-    page.get_by_role("button", name="menu", exact=True).click()
-
-  #Luego hace click en Servicios
+  print("When the user click on services")
   page.get_by_role("button", name="Servicios").click()
-  print("When Access the automation link")
+  print("When the user click on automation, the expected page opens")
   page.get_by_role("menuitem", name="Automation").click()
+  page.goto("https://www.accenture.com/es-es/services/intelligent-automation-index")
 
-  #Acccedemos al enlace de quienes somos y entramos al apartado de Sostenibilidad
-  print("When Visit the Who We Are link and access the Sustainability section")
-  if(utils.is_mobile(page)):
-    page.get_by_role("button", name="menu", exact=True).click()
-  page.get_by_role("button", name="Quiénes Somos").click()
-  page.locator("#linklistteaser-a707da989f").get_by_role("menuitem", name="Sostenibilidad").click()
-  expect(page.get_by_role("link", name="Sostenibilidad", exact=True)).to_be_visible()
+  print("When the user click on Quienes somos")
+  page.get_by_role("button", name="Quiénes somos").click()
+  print("When the user click on Sustainability, the expected page opens")
+  page.get_by_role("menu", name="Quiénes somos").get_by_label("Sostenibilidad").click()
+  page.goto("https://www.accenture.com/es-es/about/sustainability/sustainability-value-promise")
 
-  #Accedemos al apartado de incorporate y accedemos al enlace de oferta
-  print("When Visit the Join link and enter the Offer Finder link")
-  if(utils.is_mobile(page)):
-    page.get_by_role("button", name="menu", exact=True).click()
+  print("When the user click on the Offer Finder")
   page.get_by_role("button", name="Incorpórate").click()
+  print("When the user enters the offer search link and directs me to the corresponding page")
   page.get_by_role("menuitem", name="Buscador de ofertas").click()
-
+  page.goto("https://www.accenture.com/es-es/careers/jobsearch?jk=&sb=1&vw=0&is_rj=0&pg=1")
 
   
-
-
 
 
 

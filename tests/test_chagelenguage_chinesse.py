@@ -1,7 +1,7 @@
 
 from playwright.sync_api import Page, expect
 
-def test_changelanguage(page:Page): 
+def test_changelanguage_chinesse(page:Page): 
 
   #Abrir la URL de la pagina
   print("Given the user visit home page Accenture")
