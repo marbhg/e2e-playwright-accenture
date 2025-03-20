@@ -45,6 +45,7 @@ def test_visit_menu_links(page:Page):
   page.get_by_role("menuitem", name="Australia (English)").click()
   print("When the user must view the page in Australian")
   page.goto("https://www.accenture.com/au-en")
+  
 
 
   
