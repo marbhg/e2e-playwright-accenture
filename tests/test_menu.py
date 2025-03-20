@@ -28,6 +28,25 @@ def test_visit_menu_links(page:Page):
   page.get_by_role("menuitem", name="Buscador de ofertas").click()
   page.goto("https://www.accenture.com/es-es/careers/jobsearch?jk=&sb=1&vw=0&is_rj=0&pg=1")
 
+  print("When you enter the language link and change it to Chinese")
+  page.get_by_role("button", name="Country and language selector").click()
+  page.get_by_role("menuitem", name="China/Mainland (English)").click()
+  print("When the user must view the page in Chinese")
+  page.goto("https://www.accenture.com/cn-en")
+
+  print("When the user the language link and change it to Canada")
+  page.get_by_role("button", name="Country and language selector").click()
+  page.get_by_role("menuitem", name="Canada (French)").click()
+  print("When the user must view the page in Canada")
+  page.goto("https://www.accenture.com/ca-en")
+
+  print("When you enter the language link and change Australian")
+  page.get_by_role("button", name="Country and language selector").click()
+  page.get_by_role("menuitem", name="Australia (English)").click()
+  print("When the user must view the page in Australian")
+  page.goto("https://www.accenture.com/au-en")
+
+
   
 
 
