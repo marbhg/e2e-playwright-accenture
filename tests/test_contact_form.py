@@ -1,7 +1,7 @@
 from playwright.sync_api import Page, expect
  
 #Arir la URL de la pagina
-def test_visit_contact_form_invalid(page:Page):
+def test_contac_form_invalid_email(page:Page):
 
 #Abrir la URL de la pagina 
   print("Given the user visit home page Accenture")
@@ -38,8 +38,7 @@ def test_visit_contact_form_invalid(page:Page):
   expect(page.get_by_text("Email field is required and")).to_be_visible()
 
 
-
-
+  def Fill_out_the_form_with_the_email_section_empty(page:Page):
  
 
  
