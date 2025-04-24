@@ -51,13 +51,8 @@ def test_contac_form_invalid_email(page:Page):
     
     print("When I fill out all the fields")
     page.get_by_role("textbox", name="* First Name").click()
-    page.get_by_role("textbox", name="* First Name").press("CapsLock")
-    page.get_by_role("textbox", name="* First Name").fill("M")
-    page.get_by_role("textbox", name="* First Name").press("CapsLock")
     page.get_by_role("textbox", name="* First Name").fill("Maria")
     page.get_by_role("textbox", name="* First Name").press("Tab")
-    page.get_by_role("textbox", name="* Last Name").press("CapsLock")
-    page.get_by_role("textbox", name="* Last Name").fill("L")
     page.get_by_role("textbox", name="* Last Name").press("CapsLock")
     page.get_by_role("textbox", name="* Last Name").fill("Lopez")
     page.get_by_role("textbox", name="* Last Name").press("Tab")
@@ -83,6 +78,8 @@ def test_contac_form_invalid_email(page:Page):
     print("And the form should not be submitted and display an error message")
     page.locator("iframe[name=\"c-7xrl8zdyng0n\"]").content_frame.get_by_role("button", name="Verificar").click()
     page.get_by_text("Email field is required and").click()
+    expect(page.get_by_text("Email field is required and")).to_be_visible()
+
 
     
 
