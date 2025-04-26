@@ -15,7 +15,7 @@ def test_visit_menu_links(page:Page):
   print("When the user click on automation, the expected page opens")
   page.get_by_role("link", name="Automation").click()
   page.goto("https://www.accenture.com/es-es/services/intelligent-automation-index")
-  expect(page).to_have_url("Automation")
+  expect(page).to_have_url("automation")
 
 
   print("When the user click on Quienes somos")
