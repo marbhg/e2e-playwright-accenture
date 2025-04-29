@@ -16,6 +16,18 @@ def test_changelanguage_chinesse(page:Page):
   print("And the user changes the language to Chinese")
   page.get_by_role("menuitem", name="China/Mainland (Chinese)").click()
 
+  print("When you enter the language link and change it to Chinese")
+  page.get_by_role("button", name="Country and language selector").click()
+  page.get_by_role("menuitem", name="China/Mainland (Chinese)").click()
+  print("When the user must view the page in Chinese")
+  page.get_by_role("button", name="Country and language selector").click()
+    
+  print("When the user the language link and change it to Canada")
+  page.locator("li").filter(has_text="Canada (French)").click()
+  page.get_by_role("button", name="Country and language selector").click()
+  print("When the user must view the page in Canada")
+  page.get_by_role("menuitem", name="Canada (French)").click()
+
 
 
   
