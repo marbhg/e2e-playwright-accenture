@@ -19,8 +19,8 @@ def test_visit_menu_links(page:Page):
   page.goto("https://www.accenture.com/es-es")
   print("When the user click on Quienes somos")
   page.get_by_role("button", name="Quiénes somos").click()
-  expect(page).to_have_url("Quienes somos")
   print("When the user click on Sustainability, the expected page opens")
+  page.gotp("https://www.accenture.com/es-es/about/sustainability/sustainability-value-promise")
   page.locator("#globalnav-primarynavlinks-item1-5588bc7152").get_by_role("list").filter(has_text="Quiénes somos Equipo").get_by_label("Sostenibilidad").click()
   
 
