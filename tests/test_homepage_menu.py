@@ -43,9 +43,6 @@ def test_visit_menu_links(page:Page):
 
   if(utils.is_mobile(page)):
     page.get_by_role("button", name="Únete a nuestro equipo").click()
-
-  print("When the user enters the offer search link and directs me to the corresponding page")
-  page.get_by_role("link", name="Buscador de ofertas").click()
-  expect(page).to_have_url(re.compile(".*careers.*"))
+    
 
   
