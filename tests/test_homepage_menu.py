@@ -1,5 +1,6 @@
 from playwright.sync_api import Page, expect
 import utils
+import re
 
 def test_visit_menu_links(page:Page):
   #Abrir la URL de la pagina
@@ -20,15 +21,13 @@ def test_visit_menu_links(page:Page):
   print("When the user click on Quienes somos")
   page.get_by_role("button", name="Quiénes somos").click()
   print("When the user click on Sustainability, the expected page opens")
-  page.gotp("https://www.accenture.com/es-es/about/sustainability/sustainability-value-promise")
   page.locator("#globalnav-primarynavlinks-item1-5588bc7152").get_by_role("list").filter(has_text="Quiénes somos Equipo").get_by_label("Sostenibilidad").click()
-  
+  expect(page).to_have_url(re.compile(".*sustainability.*"))
 
   print("When the user click on the Offer Finder")
   page.get_by_role("button", name="Incorpórate").click()
   expect(page).to_have_url("Incorporate")
   print("When the user enters the offer search link and directs me to the corresponding page")
   page.get_by_role("link", name="Buscador de ofertas").click()
-  page.goto("https://www.accenture.com/es-es/careers/jobsearch?jk=&vw=0&is_rj=0&pg=1")
 
   
