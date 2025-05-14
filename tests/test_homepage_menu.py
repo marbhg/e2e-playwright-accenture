@@ -9,7 +9,7 @@ def test_visit_menu_links(page:Page):
 
  #Localizamos el elemento por texto
   print("When the user aceppt the cookies")
-  page.get_by_role("button", name="Aceptar todas las Cookies.").click()
+  page.get_by_role("button", name="Aceptar todas las cookies").click()
   #Comprobamos el ancho de la pantalla
   if(utils.is_mobile(page)):
     print("When the user click on menu")
