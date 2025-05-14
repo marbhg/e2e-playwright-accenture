@@ -26,7 +26,7 @@ def test_change_language_french(page:Page):
   page.goto("https://www.accenture.com/es-es/about/contact-us") 
 
   print("When the user accept the cookies")
-  page.get_by_role("button", name="Aceptar todas las Cookies.").click()
+  page.get_by_role("button", name="Aceptar todas las cookies").click()
   if(utils.is_mobile(page)):
     print("When the user click on menu")
     page.get_by_label("menu", exact=True).click()
