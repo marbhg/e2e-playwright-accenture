@@ -9,7 +9,7 @@ def test_contac_form_invalid_email(page:Page):
 
   #Acepta las Cookies
   print("When the user accept the cookies")
-  page.get_by_role("button", name="Aceptar todas las Cookies.").click()
+  page.get_by_role("button", name="Aceptar todas las cookies").click()
 
   print("When The user accesses the Jobseeker link")
   page.get_by_role("button", name="Jobseeker ").click()
@@ -42,7 +42,7 @@ def test_Fill_out_the_form_with_the_email_section_empty(page:Page):
   print("Given the user visit home page Accenture")
   page.goto("https://www.accenture.com/es-es")
   print("When the user accept the cookies")
-  page.get_by_role("button", name="Aceptar todas las Cookies.").click()
+  page.get_by_role("button", name="Aceptar todas las cookies").click()
   print("When I enter the form section")
   page.get_by_role("link", name="Contacto").click()
   page.get_by_role("button", name="Jobseeker ").click()
